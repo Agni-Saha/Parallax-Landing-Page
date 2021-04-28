@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.Container {
+    height: 100vh;
+}
+
+.Container img {
+    width: 100%;
+    position: absolute;
+    height: 120vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.rock {
+    top: 15%;
+}
+
+.main-title {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 5rem;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -30%);
+}
+
+.girl {
+    top: 100px;
+}
+
+/*-------------------------------------------------------------------
+------------------------Navbar Portion-------------------------------
+--------------------------------------------------------------------*/
+
+nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    z-index: 1;
+}
+
+.Navbar {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    background: none;
+    padding-bottom: 10px;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgba(13, 13, 13, 0.5);
+    font-weight: 600;
+    font-size: 1.15em;
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.nav-item {
+    margin-top: 0.25em;
+    margin-left: 0.25em;
+}
+
+.navbar-toggler {
+    margin: 0.5rem;
+    border: none;
+}
+
+.togglerIcon:hover {
+    color: black;
+}
+
+.togglerIcon:focus {
+    border: none;
+}
+
+.active {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .Navbar {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: flex-start;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .Nav-link {
+        margin-left: 25px;
+    }
+    .navbar-toggle {
+        display: none;
+    }
+    .nav-link:hover {
+        color: rgba(13, 13, 13, 1);
+    }
+}
+
+/*------------------------------------------------------
+------------------Button Portion------------------------
+-------------------------------------------------------*/
+
+.Button-Creation {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 30px;
+    color: #21ebff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 35%;
+    transition: 0.3s;
+    overflow: hidden;
+    margin-top: 3%;
+}
+
+.Button-Creation:hover {
+    background: #21ebff;
+    color: #00214d;
+    box-shadow: 0 0 50px #21ebff;
+    text-shadow: 0 0 3px #00214d;
+    transition-delay: 0.3s;
+}
+
+.Button-Creation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #21ebff;
+    border-left: 3px solid #21ebff;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.Button-Creation:hover::before {
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+
+.Button-Creation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #21ebff;
+    border-right: 3px solid #21ebff;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.Button-Creation:hover::after {
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+
+/*--------------------------------------------------------------
+# Departments Portion
+--------------------------------------------------------------*/
+
+.content {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #0c0b12, #0d0c14, #0e0c15, #0e0d17, #0f0d18);
+    min-height: 100vh;
+    z-index: 2;
+    position: absolute;
+}
+
+.content-title {
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 20vh;
+    text-align: center;
+}
+
+.scroll {
+    height: 265px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scroll2 {
+    height: 265px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scroll2::-webkit-scrollbar {
+    width: 2em;
+    height: 2em
+}
+
+.departments {
+    width: 100%;
+    font-family: 'Vollkorn', serif;
+}
+
+.departments .nav-tabs {
+    border: 0;
+}
+
+.departments .nav-link {
+    /* border: 0; */
+    padding: 12px 15px 12px 10px;
+    transition: 0.3s;
+    color: white;
+    border-radius: 0;
+    border-right: 5px solid #072ac8;
+    border-left: 5px solid #072ac8;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.departments .nav-link:hover {
+    color: #fffffe;
+    background-color: #ff8906;
+}
+
+.departments .nav-link.active {
+    color: #fffffe;
+    border-color: #fffffe;
+    background-color: #ff8906;
+}
+
+.departments .tab-pane.active {
+    -webkit-animation: fadeIn 0.3s ease-out;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.departments .details {
+    border-bottom: 3px solid #ff8906;
+}
+
+.departments .details h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fffffe;
+    border-bottom: 2px solid #ff8906;
+}
+
+.departments .details p {
+    color: #a7a9be;
+}
+
+.departments .details p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+    .scroll::-webkit-scrollbar {
+        width: 2em;
+        height: 2em
+    }
+}
+
+@media (max-width: 992px) {
+    .departments .nav-link {
+        border: 0;
+        padding: 15px;
+        border-right: 5px solid #072ac8;
+        border-left: 5px solid #072ac8;
+    }
+    .departments .nav-link.active {
+        color: #fff;
+        background: #fffffe;
+        background-color: #ff8906;
+    }
+}
+
+/*------------------------------------------------------------------------------------
+===================================== Footer CSS ==================================
+------------------------------------------------------------------------------------*/
+
+.footer {
+    color: #FFF;
+    padding: 60px 0 20px 50px;
+    line-height: 1.5em;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.footer h2 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #f25f4c;
+    font-weight: 700;
+}
+
+.footer p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.footer .link-list li {
+    padding: 10px;
+    border-bottom: 1px solid #6C6C6C;
+}
+
+.footer .link-list li:first-child {
+    padding-top: 0;
+    border-bottom: 1px solid #6C6C6C;
+}
+
+.footer .link-list li a {
+    color: #2cb67d;
+    text-decoration: none;
+}
+
+.footer .link-list li a:hover {
+    color: #ff8906;
+}
+
+.footer .link-list li i {
+    float: right;
+}
+
+.footer .map-img {
+    font-weight: 600;
+    font-size: 17px;
+    padding-left: 20px;
+}
+
+.footer address a {
+    color: #2cb67d;
+    text-decoration: none;
+}
+
+.footer address a:hover {
+    color: #ff8906;
+}
+
+@media screen and (max-width: 940px) {
+    .footer {
+        padding: 30px 10px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .kf-2 {
+        padding: 30px 10px;
+    }
+}
