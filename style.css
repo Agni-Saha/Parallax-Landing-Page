@@ -5,6 +5,10 @@
     color: #fff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .Container {
     height: 100vh;
 }
@@ -18,7 +22,7 @@
 }
 
 .rock {
-    top: 15%;
+    top: 17%;
 }
 
 .main-title {
@@ -27,11 +31,17 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    font-size: 5rem;
-    width: 100%;
+    font-size: 500%;
+    width: 80%;
     overflow-y: hidden;
     text-align: center;
     transform: translate(-50%, -30%);
+}
+
+@media screen and (max-width:768px) {
+    .main-title-heading {
+        font-size: 50%;
+    }
 }
 
 .girl {
@@ -66,21 +76,28 @@ nav {
     display: none;
 }
 
-.nav-link {
-    text-decoration: none;
-    color: rgba(13, 13, 13, 0.5);
-    font-weight: 600;
-    font-size: 1.15em;
+@media screen and (max-width: 768px) {
+    .nav-item {
+        margin-top: 0.25em;
+        margin-left: 0.25em;
+        background-color: rgba(14,13,23,0.7);
+        width: 50%;
+    }
+    .nav-link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.05em;
+        color: #f25f4c;
+        padding-left: 50px;
+    }
+    .nav-link:hover {
+        color: #ff8906;
+    }
 }
 
 .main-nav li {
     text-align: center;
     margin: 15px auto;
-}
-
-.nav-item {
-    margin-top: 0.25em;
-    margin-left: 0.25em;
 }
 
 .navbar-toggler {
@@ -118,8 +135,11 @@ nav {
     .main-nav li {
         margin: 0;
     }
-    .Nav-link {
-        margin-left: 25px;
+    .nav-link {
+        text-decoration: none;
+        color: rgba(13, 13, 13, 0.5);
+        font-weight: 600;
+        font-size: 1.15em;
     }
     .navbar-toggle {
         display: none;
